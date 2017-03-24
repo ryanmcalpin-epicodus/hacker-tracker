@@ -47,4 +47,10 @@ public class TeamTest {
     Team team2 = new Team("The Yeps");
     assertEquals(team2, Team.find(team2.getId()));
   }
+
+  @Test
+  public void getMembers_initiallyReturnsEmptyList_ArrayList() {
+    Team team = new Team("The Snacks");
+    assertEquals(0, team.getMembers().size());
+  }
 }
