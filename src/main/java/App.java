@@ -44,5 +44,24 @@ public class App {
       model.put("template", "templates/team.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/teams/:id/members/new", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.find(Integer.parseInt(request.params(":id")));
+      model.put("team", team);
+      model.put("template", "templates/team-member-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/members", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String memberName = request.queryParams("name");
+      Member member = new Member(memberName);
+      Team team = Team.find(Integer.parseInt(request.queryParams("id")));
+      team.addMember(member);
+      model.put("team", team);
+      model.put("template", "templates/team.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
