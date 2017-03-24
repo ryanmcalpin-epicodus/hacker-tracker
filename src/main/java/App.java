@@ -59,7 +59,8 @@ public class App {
     post("/members", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String memberName = request.queryParams("name");
-      Member member = new Member(memberName);
+      String bio = request.queryParams("aboutMe");
+      Member member = new Member(memberName, bio);
       Team team = Team.find(Integer.parseInt(request.queryParams("id")));
       team.addMember(member);
       model.put("members", team.getMembers());

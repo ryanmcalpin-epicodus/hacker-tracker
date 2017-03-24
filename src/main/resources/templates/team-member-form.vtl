@@ -1,9 +1,13 @@
 <h1>Add A Team Member</h1>
-<form action="/members" method="post">
+<form action="/members" method="post" id="member-form">
   <input type="hidden" name="id" value="$team.getId()" id="id">
   <div class="form-group">
     <label for="name">Team Member Name</label>
     <input type="text" name="name" id="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="aboutMe">Provide a Brief Bio</label><br>
+    <textarea rows="4" cols="50" name="aboutMe" form="member-form" id="aboutMe"></textarea>
   </div>
   <button type="submit"class="btn btn-danger">ADD</button>
 </form>

@@ -2,3 +2,7 @@
   float: left;
   margin-right: 20px;
 }
+
+textarea {
+  resize: none;
+}
