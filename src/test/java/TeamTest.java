@@ -53,4 +53,12 @@ public class TeamTest {
     Team team = new Team("The Snacks");
     assertEquals(0, team.getMembers().size());
   }
+
+  @Test
+  public void addMember_addsMemberToTeam_true() {
+    Team team = new Team("The Snacks");
+    Member member = new Member("Ry");
+    team.addMember(member);
+    assertTrue(team.getMembers().contains(member));
+  }
 }
