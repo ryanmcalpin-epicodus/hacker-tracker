@@ -40,6 +40,7 @@ public class App {
     get("/teams/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Team team = Team.find(Integer.parseInt(request.params(":id")));
+      model.put("members", team.getMembers());
       model.put("team", team);
       model.put("template", "templates/team.vtl");
       return new ModelAndView(model, layout);
