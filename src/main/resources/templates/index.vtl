@@ -6,6 +6,6 @@
 
 <ul>
   #foreach ($team in $teams)
-    <li>$team.getName()</li>
+    <li><a href="/teams/$team.getId()">$team.getName()</a></li>
   #end
 </ul>
