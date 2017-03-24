@@ -1,11 +1,9 @@
 <h1>Hacker Tracker</h1>
 
-<a href="/teams/new">Add a Team</a>
-
 <h2>Teams</h2>
 
 <ul>
   #foreach ($team in $teams)
-    <li>$team.getName()</li>
+    <li>#team.getName()</li>
   #end
 </ul>
