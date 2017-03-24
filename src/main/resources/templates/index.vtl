@@ -2,10 +2,12 @@
 
 <a href="/teams/new">Add a Team</a>
 
-<h2>Teams</h2>
+#if ($teams.size() > 0)
+  <h2>Teams</h2>
 
-<ul>
-  #foreach ($team in $teams)
-    <li><a href="/teams/$team.getId()">$team.getName()</a></li>
-  #end
-</ul>
+  <ul>
+    #foreach ($team in $teams)
+      <li><a href="/teams/$team.getId()">$team.getName()</a></li>
+    #end
+  </ul>
+#end
