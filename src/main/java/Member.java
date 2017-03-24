@@ -27,4 +27,8 @@ public class Member {
   public static void clear() {
     instances.clear();
   }
+
+  public static Member find(int id) {
+    return instances.get(id - 1);
+  }
 }
