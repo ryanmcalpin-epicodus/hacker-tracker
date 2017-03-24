@@ -59,6 +59,7 @@ public class App {
       Member member = new Member(memberName);
       Team team = Team.find(Integer.parseInt(request.queryParams("id")));
       team.addMember(member);
+      model.put("members", team.getMembers());
       model.put("team", team);
       model.put("template", "templates/team.vtl");
       return new ModelAndView(model, layout);
