@@ -8,4 +8,10 @@ public class TeamTest {
     Team team = new Team("The Hacks");
     assertTrue(team instanceof Team);
   }
+
+  @Test
+  public void getName_returnsName_String() {
+    Team team = new Team("The Hacks");
+    assertEquals("The Hacks", team.getName());
+  }
 }
