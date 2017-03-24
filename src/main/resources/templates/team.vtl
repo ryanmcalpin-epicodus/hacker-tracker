@@ -1,6 +1,6 @@
 <h1>$team.getName()</h1>
 #if ($members.size() > 0)
-  <h3>Members</h3>
+  <h3>Members (<a href="/teams/$team.getId()/members/new">add</a>)</h3>
   <ul>
     #foreach ($member in $members)
       <li><a href="/teams/$team.getId()/members/$member.getId()">$member.getName()</a></li>
