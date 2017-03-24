@@ -9,6 +9,15 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
+    ProcessBuilder process = new ProcessBuilder();
+    Integer port;
+    if (process.enviornment().get("PORT") != null) {
+      port = Integer.parseInt(process.enviornment().get("PORT"));
+    } else {
+      port = 4567;
+    }
+    setPort(port);
+
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("teams", Team.all());
