@@ -36,6 +36,7 @@ _Projoct for Epicodus, demonstrating proficiency in Java, Spark, Velocity, junit
 ## Setup/Installation Requirements
 
 * _Clone the repository_
+* _Navigate to the repository in the terminal_
 * _Run the command 'gradle run'_
 * _Open browser and go to localhost:4567_
 

@@ -7,6 +7,8 @@
       <li><a href="/teams/$team.getId()/members/$member.getId()">$member.getName()</a></li>
     #end
   </ul>
+#else
+  <h3>This team is empty.</h3>
 #end
 <a href="/teams/$team.getId()/members/new">Add Member</a>
 <br>
