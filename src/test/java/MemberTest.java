@@ -4,14 +4,14 @@ import static org.junit.Assert.*;
 public class MemberTest {
 
   @Test
-  public void team_instantiatesCorrectly_true() {
-    Team team = new Team("The Hacks");
-    assertTrue(team instanceof Team);
+  public void member_instantiatesCorrectly_true() {
+    Member member = new Member("Ryan");
+    assertTrue(member instanceof Member);
   }
 
   @Test
   public void getName_returnsName_String() {
-    Team team = new Team("The Hacks");
-    assertEquals("The Hacks", team.getName());
+    Member member = new Member("Ryan");
+    assertEquals("Ryan", member.getName());
   }
 }
