@@ -2,11 +2,14 @@
 
 <h2>$team.getName()</h2>
 
-<ul>
-  #foreach ($member in $members)
-    <li>$member.getName()</li>
-  #end
-</ul>
+#if ($members.size() > 0)
+  <h3>Members</h3>
+  <ul>
+    #foreach ($member in $members)
+      <li>$member.getName()</li>
+    #end
+  </ul>
+#end
 
 <a href="/teams/$team.getId()/members/new">Add Member</a>
 <a href="/teams">View Teams</a>
