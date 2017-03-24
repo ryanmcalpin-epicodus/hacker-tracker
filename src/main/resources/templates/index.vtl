@@ -1,13 +1,10 @@
-<h1>Snack-a-thon</h1>
-<a href="/info">Learn More</a>
-<br>
-<a href="/teams/new">Add a Team</a>
 #if ($teams.size() > 0)
-  <h2>Teams</h2>
-
+  <h1>Teams</h1>
   <ul>
     #foreach ($team in $teams)
       <li><a href="/teams/$team.getId()">$team.getName()</a></li>
     #end
   </ul>
+#else
+  <h3>There are no teams yet. Be the first to <a href="/teams/new">add a team</a>!</h3>
 #end
